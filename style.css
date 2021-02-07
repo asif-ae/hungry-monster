@@ -25,6 +25,16 @@
   border-radius: 0 10px 10px 0;
 }
 
+.button-style:focus {
+  box-shadow: none;
+}
+
+.button-style:hover {
+  color: white;
+  cursor: pointer;
+  background-color: orangered;
+}
+
 .form-check-input:checked {
   background-color: tomato;
   border-color: tomato;
