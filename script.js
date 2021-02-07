@@ -34,7 +34,8 @@ searchButton.addEventListener('click', () => {
       `;
       getResultArea.innerHTML = alertItem;
     }
-    
+
+    // Control all mini card's information
     listItems.forEach(theMeal => {
       const theCard = document.createElement('div');
       theCard.classList.add('col-md-6', 'col-lg-4', 'col-xl-3', 'py-3');
@@ -57,12 +58,16 @@ searchButton.addEventListener('click', () => {
   getResultArea.appendChild(rowInResult);
 });
 
+// This function is created for getting single meal name from the list of html cards
+// and organize the link for creating meal card with details.
 const displayMealName = mealName => {
   const fullLink = `${thelink}${mealName}`;
   fetch(fullLink)
   .then(secondResponse => secondResponse.json())
   .then(singleMealDetail => renderMealDetails(singleMealDetail));
 }
+
+// Get the link from display name function and render the meal detail card
 const renderMealDetails = mealDetail => {
   const singleMeal = mealDetail.meals[0];
   const detailArea = document.getElementById('detail-area');
@@ -72,6 +77,7 @@ const renderMealDetails = mealDetail => {
       <div class="card-body">
         <h1>${singleMeal.strMeal}</h1>
         <h5 class="py-3">Ingredients</h5>
+        <!-- This function is created at the bottom of the script document -->
         ${ingredientsFunction(singleMeal.strIngredient1)}
         ${ingredientsFunction(singleMeal.strIngredient2)}
         ${ingredientsFunction(singleMeal.strIngredient3)}
@@ -82,11 +88,13 @@ const renderMealDetails = mealDetail => {
         ${ingredientsFunction(singleMeal.strIngredient8)}
         ${ingredientsFunction(singleMeal.strIngredient9)}
         ${ingredientsFunction(singleMeal.strIngredient10)}
+        <!-- /This function is created at the bottom of the script document -->
       </div>
     </div>
   `;
 }
 
+// This function is created for ingredients section
 const ingredientsFunction = ingredient => {
   const theInnerHTML = `
     <div class="form-check text-secondary">
