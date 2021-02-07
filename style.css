@@ -1,0 +1,69 @@
+.form-outline {
+  position: relative;
+  width: 50%;
+}
+
+.svg {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 17px;
+}
+
+.input-style {
+  padding: 1rem 1rem 1rem 4rem !important;
+  border-radius: 10px 0 0 10px;
+}
+
+.input-style:focus {
+  box-shadow: none;
+}
+
+.button-style {
+  background-color: tomato;
+  color: white;
+  border-radius: 0 10px 10px 0;
+}
+
+.form-check-input:checked {
+  background-color: tomato;
+  border-color: tomato;
+}
+
+section {
+  padding: 20px 0;
+}
+
+.card-style {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-style:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.card-style img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: auto;
+}
+
+.detail-card-style {
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: none;
+  border: none;
+}
+
+.detail-card-style img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.alert-style {
+  width: 50%;
+  margin: auto;
+}
