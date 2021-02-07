@@ -1,5 +1,7 @@
+// The core link of the API
 const thelink = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 
+// Search Button Click Hanndler
 const searchButton = document.getElementById('search-button');
 searchButton.addEventListener('click', () => {
   const getResultArea = document.getElementById('result-area');
